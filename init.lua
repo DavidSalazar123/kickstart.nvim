@@ -54,6 +54,7 @@ vim.opt.timeoutlen = 300
 -- Configure how new splits should be opened
 vim.opt.splitright = true
 vim.opt.splitbelow = false
+<<<<<<< HEAD
 
 -- Set the length of tabs
 vim.opt.tabstop = 4
@@ -61,6 +62,8 @@ vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.expandtab = true
+=======
+>>>>>>> 258fdcb (Personal configs)
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
@@ -818,7 +821,15 @@ require('lazy').setup({
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
         documentation = { auto_show = false, auto_show_delay_ms = 500 },
       },
+<<<<<<< HEAD
 >>>>>>> d350db2 (feat: switch nvim-cmp for blink.cmp (#1426))
+=======
+      -- If you prefer more traditional completion keymaps,
+      -- you can uncomment the following lines
+      ['<CR>'] = cmp.mapping.confirm { select = true },
+      ['<Tab>'] = cmp.mapping.select_next_item(),
+      ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+>>>>>>> 258fdcb (Personal configs)
 
       sources = {
         default = { 'lsp', 'path', 'snippets', 'lazydev' },
