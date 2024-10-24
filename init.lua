@@ -727,9 +727,13 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
+<<<<<<< HEAD
         python = { 'isort', 'ruff_format' },
         go = { 'gofumpt', 'golines', 'goimports' },
 
+=======
+        python = { 'isort', 'black' },
+>>>>>>> f7cc015 (Show all hidden files)
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
