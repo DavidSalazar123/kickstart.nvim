@@ -626,11 +626,18 @@ require('lazy').setup({
         clangd = {},
 
         -- Go LSP
+<<<<<<< HEAD
         --gopls = {},
         --goimport = {},
         --golines = {},
 
         -- Python LSP
+=======
+        gopls = {},
+
+        -- Python LSP
+        pyright = {},
+>>>>>>> 35b9abf (Added git configs and servers)
         ruff = {},
         black = {},
         mypy = {},
@@ -728,12 +735,16 @@ require('lazy').setup({
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
 <<<<<<< HEAD
+<<<<<<< HEAD
         python = { 'isort', 'ruff_format' },
         go = { 'gofumpt', 'golines', 'goimports' },
 
 =======
         python = { 'isort', 'black' },
 >>>>>>> f7cc015 (Show all hidden files)
+=======
+        python = { 'isort', 'ruff' },
+>>>>>>> 35b9abf (Added git configs and servers)
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
@@ -987,6 +998,7 @@ require('lazy').setup({
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
 <<<<<<< HEAD
+<<<<<<< HEAD
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   { import = 'custom.plugins' },
 =======
@@ -997,6 +1009,10 @@ require('lazy').setup({
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
 >>>>>>> fb7f6a1 (samarth-nagar fix: lazy help tag on line 931 (#1167))
+=======
+  --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
+  { import = 'custom.plugins' },
+>>>>>>> 35b9abf (Added git configs and servers)
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
