@@ -60,7 +60,7 @@ vim.opt.splitbelow = false
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
@@ -559,6 +559,8 @@ require('lazy').setup({
 
         -- Go LSP
         gopls = {},
+        gofumpt = {},
+        golines = {},
 
         -- Python LSP
         pyright = {},
@@ -658,6 +660,8 @@ require('lazy').setup({
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
         python = { 'isort', 'ruff' },
+        go = { 'gofumpt', 'golines', 'gopls' },
+
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
