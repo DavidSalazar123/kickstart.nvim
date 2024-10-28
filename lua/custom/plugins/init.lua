@@ -19,6 +19,7 @@ return {
       -- Key mappings
       vim.api.nvim_set_keymap('n', '<leader>dc', ':DiffviewClose<CR>', { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '<leader>df', ':DiffviewOpen HEAD -- %<CR>', { noremap = true, silent = true }) -- Diff uncommitted changes
+      vim.api.nvim_set_keymap('n', '<leader>da', ':DiffviewOpen <CR>', { noremap = true, silent = true }) -- Diff uncommitted changes
 
       -- Diffview configuration
       diffview.setup {
