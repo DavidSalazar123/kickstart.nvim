@@ -88,4 +88,27 @@ return {
       end, { desc = 'Next harpoon file' })
     end,
   },
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+      toggler = {
+        line = 'gcc', -- Default for line comments
+        block = 'gcb', -- Default for block comments
+      },
+      opleader = {
+        line = 'gc', -- Default for line comments
+        block = 'cb', -- Default for block comments
+      },
+      mappings = {
+        basic = true, -- Enable basic mappings
+        extra = false, -- Disable extra mappings (if not needed)
+        extended = false, -- Disable extended mappings (if not needed)
+      },
+    },
+  },
+  {
+    'pmizio/typescript-tools.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+    opts = {},
+  },
 }
