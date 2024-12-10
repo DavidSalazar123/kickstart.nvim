@@ -62,8 +62,11 @@ vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.expandtab = true
+<<<<<<< HEAD
 =======
 >>>>>>> 258fdcb (Personal configs)
+=======
+>>>>>>> f6ad078 (Fixed double diagnostics)
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
@@ -636,8 +639,11 @@ require('lazy').setup({
         gopls = {},
 
         -- Python LSP
+<<<<<<< HEAD
         pyright = {},
 >>>>>>> 35b9abf (Added git configs and servers)
+=======
+>>>>>>> f6ad078 (Fixed double diagnostics)
         ruff = {},
         black = {},
         mypy = {},
@@ -649,10 +655,13 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         ts_ls = {},
         --
 >>>>>>> 123c472 (Formatters)
+=======
+>>>>>>> f6ad078 (Fixed double diagnostics)
 
         lua_ls = {
           -- cmd = { ... },
