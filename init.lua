@@ -591,8 +591,8 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
 
         lua_ls = {
-          -- cmd = {...},
-          -- filetypes = { ...},
+          -- cmd = { ... },
+          -- filetypes = { ... },
           -- capabilities = {},
           settings = {
             Lua = {
