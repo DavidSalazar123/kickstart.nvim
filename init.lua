@@ -917,11 +917,17 @@ require('lazy').setup({
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
 <<<<<<< HEAD
+<<<<<<< HEAD
       vim.cmd.colorscheme 'tokyonight-night'
 >>>>>>> ebca680 (perf: load tokyonight.nvim in the intended way (#1360))
 =======
       vim.cmd.colorscheme 'catppuccin-mocha'
 >>>>>>> a3d0de2 (Neo-tree install)
+=======
+      vim.cmd.colorscheme 'catppuccin-macchiato'
+      vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' }) -- Transparent background for the main window
+      vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'NONE' }) -- Transparent background for non-current windows
+>>>>>>> 8aba621 (Transparent bg)
     end,
   },
 
