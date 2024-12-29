@@ -113,6 +113,5 @@ return {
     }
 
     -- Install python specific config
-    require('dap-python').setup {}
   end,
 }
