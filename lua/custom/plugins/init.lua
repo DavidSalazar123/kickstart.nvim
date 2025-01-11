@@ -112,4 +112,12 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
     opts = {},
   },
+  {
+    'windwp/nvim-ts-autotag',
+    opts = {
+      enable_close = true,
+      enable_rename = true,
+      enavle_close_on_slash = true,
+    },
+  },
 }
