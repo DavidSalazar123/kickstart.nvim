@@ -566,7 +566,7 @@ require('lazy').setup({
 
         -- Go LSP
         gopls = {},
-        gofumpt = {},
+        goimport = {},
         golines = {},
 
         -- Python LSP

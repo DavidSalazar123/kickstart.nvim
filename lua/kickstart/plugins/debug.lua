@@ -15,7 +15,7 @@ return {
     'rcarriga/nvim-dap-ui',
 
     -- Required dependency for nvim-dap-ui
-    'nvim-neotest/nvim-nio',
+    'nvim-neonvim/nvim-nio',
 
     -- Installs the debug adapters for you
     'williamboman/mason.nvim',
@@ -48,9 +48,9 @@ return {
       {
         '<leader>dgt',
         function()
-          require('dap-go').debug_test()
+          require('dap-go').debug_nvim()
         end,
-        desc = 'Debug go test',
+        desc = 'Debug go nvim',
       },
       unpack(keys),
     }
