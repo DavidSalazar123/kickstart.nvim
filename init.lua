@@ -630,9 +630,15 @@ require('lazy').setup({
 
         -- Go LSP
 <<<<<<< HEAD
+<<<<<<< HEAD
         --gopls = {},
         --goimport = {},
         --golines = {},
+=======
+        gopls = {},
+        goimport = {},
+        golines = {},
+>>>>>>> 2e431d9 (Added replace all plugin)
 
         -- Python LSP
 =======
