@@ -565,9 +565,9 @@ require('lazy').setup({
         clangd = {},
 
         -- Go LSP
-        gopls = {},
-        goimport = {},
-        golines = {},
+        --gopls = {},
+        --goimport = {},
+        --golines = {},
 
         -- Python LSP
         ruff = {},
