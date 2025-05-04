@@ -167,6 +167,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Python configs
+vim.api.nvim_create_autocmd('BufWritePost', {
+  pattern = '*.py',
+  callback = function()
+    vim.cmd '!ruff check --select F401 --fix %'
+  end,
+})
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -706,7 +714,7 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
-        python = { 'isort', 'ruff_format' },
+        python = { 'isort', 'ruff_format', 'ruff_fix' },
         go = { 'gofumpt', 'golines', 'goimports' },
 
         --
