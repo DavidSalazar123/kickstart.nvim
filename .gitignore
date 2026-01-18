@@ -5,3 +5,13 @@ nvim
 
 spell/
 lazy-lock.json
+
+# Ignore everything in lua/
+lua/*
+
+# But keep these directories
+!lua/custom/
+!lua/custom/**
+
+!lua/kickstart/
+!lua/kickstart/**
