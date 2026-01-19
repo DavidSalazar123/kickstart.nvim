@@ -20,4 +20,7 @@ return {
     statuscolumn = { enabled = true },
     words = { enabled = true },
   },
+  keys = {
+    {"<leader>n", false}
+  }
 }
