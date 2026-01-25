@@ -67,7 +67,7 @@ vim.opt.expandtab = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = false
-vim.opt.listchars = { tab = '| ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = '  ', trail = ' ', nbsp = ' ' }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
@@ -164,14 +164,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- Python configs
-vim.api.nvim_create_autocmd('BufWritePost', {
-  pattern = '*.py',
-  callback = function()
-    vim.cmd '!ruff check --select F401 --fix %'
+-- Disable auto-commenting on new lines for all file types
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = "*",
+  callback = function ()
+  vim.opt_local.formatoptions:remove({'r', 'o'}) 
   end,
 })
-
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -716,8 +715,8 @@ require('lazy').setup({
         -- Conform can also run multiple formatters sequentially
         python = { 'isort', 'ruff_format', 'ruff_fix' },
         go = { 'gofumpt', 'golines', 'goimports' },
-        c = { "clang_format" },
-        cpp = { "clang_format" },
+        c = { "clang_format", "clang-tidy" },
+        cpp = { "clang_format", "clang-tidy" },
 
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
@@ -919,7 +918,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
-  require 'kickstart.plugins.neo-tree',
+  -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`

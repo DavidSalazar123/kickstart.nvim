@@ -27,4 +27,18 @@ return {
             },
         },
     },
+    config = function(_, opts)
+        require('neo-tree').setup(opts)
+
+        vim.api.nvim_create_autocmd('ColorScheme', {
+            pattern = '*',
+            callback = function()
+                vim.api.nvim_set_hl(0, 'NeoTreeDimText', {fg = '#5a5a5a'})
+                vim.api.nvim_set_hl(0, 'NeoTreeFileName', {fg = '#ffffff'})
+            end,
+        })
+        vim.api.nvim_set_hl(0, 'NeoTreeDimText', {fg = '#5a5a5a'})
+        vim.api.nvim_set_hl(0, 'NeoTreeFileName', {fg = '#ffffff'})
+
+    end,
 }
